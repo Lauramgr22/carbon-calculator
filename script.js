@@ -53,11 +53,19 @@ function calcularHuella() {
 
     document.getElementById('total').innerText = `${total.toFixed(2)} kg CO₂e / año`;
 
-    const mensaje = total > 4000
-        ? 'Tu huella es más alta que el promedio mundial.'
-        : '¡Bien! Tu huella está por debajo del promedio.';
+    const mensajeEl = document.getElementById('mensaje');
+    mensajeEl.classList.remove('felicitacion', 'advertencia'); 
 
-    document.getElementById('mensaje').innerText = mensaje;
+    if (total > 4000) {
+        mensajeEl.innerText = 'Tu huella es más alta que el promedio mundial.';
+        mensajeEl.classList.add('advertencia');
+    } else {
+        mensajeEl.innerText = '¡Bien! Tu huella está por debajo del promedio mundial.';
+        mensajeEl.classList.add('felicitacion');
+    }
+
+
+    document.getElementById('mensaje').innerText = mensaje.innerText;
 
     mostrarGrafica(CO2auto, CO2electricidad, CO2dieta, CO2vuelos, CO2habitos);
 }

@@ -73,3 +73,16 @@ canvas {
   margin: 2rem auto;
   max-width: 100%;
 }
+
+.felicitacion {
+    color: #0E8C55;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .advertencia {
+    color: #E60000;
+    font-weight: bold;
+    text-align: center;
+  }
+  
