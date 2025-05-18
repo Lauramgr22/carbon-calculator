@@ -1,0 +1,75 @@
+/* Reset básico */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+main {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #0e8c55;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0c7547;
+}
+
+#total {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#mensaje {
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+canvas {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+}

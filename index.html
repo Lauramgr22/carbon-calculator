@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Huella de Carbono</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="chart.js"></script>
+  <script src="script.js"></script>  
+</head>
+
+<body>
+  <main id="app">
+    <!-- Pantalla de inicio -->
+    <section id="inicio">
+      <h1>Calcula tu huella de carbono</h1>
+      <button onclick="mostrarFormulario()">Empezar</button>
+    </section>
+
+    <!-- Preguntas -->
+    <section id="formulario" style="display:none;">
+        <h2>Transporte</h2>
+      
+        <label>
+          ¿Cuántos km recorres en auto por semana?
+          <input type="number" id="kmAuto">
+        </label>
+      
+        <label>
+          ¿Qué tipo de vehículo usas?
+          <select id="tipoVehiculo">
+            <option value="gasolina">Gasolina</option>
+            <option value="diesel">Diésel</option>
+            <option value="electrico">Eléctrico</option>
+          </select>
+        </label>
+      
+        <h2>Energía</h2>
+      
+        <label>
+          ¿Cuánta electricidad consumes al mes (kWh)?
+          <input type="number" id="electricidad">
+        </label>
+      
+        <label>
+          ¿Tu fuente de energía es renovable?
+          <select id="renovable">
+            <option value="no">No</option>
+            <option value="si">Sí</option>
+          </select>
+        </label>
+      
+        <h2>Alimentación</h2>
+      
+        <label>
+          ¿Qué tipo de dieta tienes?
+          <select id="dieta">
+            <option value="vegana">Vegana</option>
+            <option value="vegetariana">Vegetariana</option>
+            <option value="mixta">Mixta</option>
+            <option value="carnivora">Carnívora</option>
+          </select>
+        </label>
+      
+        <label>
+          ¿Cuántas comidas con carne consumes por semana?
+          <input type="number" id="comidasConCarne">
+        </label>
+      
+        <h2>Hábitos y consumo</h2>
+      
+        <label>
+          ¿Cuántos vuelos haces al año?
+          <input type="number" id="vuelos">
+        </label>
+      
+        <label>
+          ¿Reciclas regularmente?
+          <select id="reciclas">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+      
+        <label>
+          ¿Usas transporte público o bicicleta al menos 1 vez/semana?
+          <select id="transporteSostenible">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+      
+        <br><br>
+        <button onclick="calcularHuella()">Calcular</button>
+      </section>
+      
+    <!-- Resultados -->
+    <section id="resultado" style="display:none;">
+      <h2>Tu huella de carbono estimada:</h2>
+      <p id="total"></p>
+      <canvas id="grafica" width="300"></canvas>
+      <p id="mensaje"></p>
+      <button onclick="reiniciar()">Volver a calcular</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
