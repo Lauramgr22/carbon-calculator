@@ -54,7 +54,7 @@ function calcularHuella() {
     document.getElementById('total').innerText = `${total.toFixed(2)} kg CO₂e / año`;
 
     const mensajeEl = document.getElementById('mensaje');
-    mensajeEl.classList.remove('felicitacion', 'advertencia'); 
+    mensajeEl.classList.remove('felicitacion', 'advertencia');
 
     if (total > 4000) {
         mensajeEl.innerText = 'Tu huella es más alta que el promedio mundial.';
@@ -64,8 +64,18 @@ function calcularHuella() {
         mensajeEl.classList.add('felicitacion');
     }
 
-
     document.getElementById('mensaje').innerText = mensaje.innerText;
+
+    const consejos = [];
+    if (CO2auto > 1000) consejos.push('Considera usar más transporte público o bicicleta.');
+    if (CO2dieta > 1500) consejos.push('Reduce el consumo de carne, especialmente roja.');
+    if (CO2electricidad > 1500) consejos.push('Ahorra energía o considera fuentes renovables.');
+    if (!reciclas) consejos.push('Empieza a reciclar regularmente.');
+    if (!transporteSostenible) consejos.push('Camina o usa la bici al menos 1 vez por semana.');
+
+    document.getElementById('consejos').innerHTML = `
+    <h3>Consejos para reducir tu huella:</h3>
+    <ul>${consejos.map(c => `<li>${c}</li>`).join('')}</ul>`;
 
     mostrarGrafica(CO2auto, CO2electricidad, CO2dieta, CO2vuelos, CO2habitos);
 }

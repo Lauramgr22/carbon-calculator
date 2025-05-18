@@ -75,14 +75,24 @@ canvas {
 }
 
 .felicitacion {
-    color: #0E8C55;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .advertencia {
-    color: #E60000;
-    font-weight: bold;
-    text-align: center;
-  }
-  
+  color: #0e8c55;
+  font-weight: bold;
+  text-align: center;
+}
+
+.advertencia {
+  color: #e60000;
+  font-weight: bold;
+  text-align: center;
+}
+
+#consejos {
+  margin-top: 1.5rem;
+  background: #f9f9f9;
+  border-left: 4px solid #0e8c55;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+#consejos h3 {
+  margin-top: 0;
+}
