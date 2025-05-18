@@ -23,12 +23,12 @@ Esta es una aplicación que estima tu huella de carbono anual en función de tus
 - [Chart.js](https://www.chartjs.org/) para visualización
 
 ## 📦 Estructura
-.
-├── index.html # Estructura principal de la app
-├── style.css # Estilos visuales
-├── script.js # Lógica del formulario y cálculo
-└── chart.js # Función de gráfica con Chart.js
 
+carbon-calculator/
+├── index.html             # Estructura principal de la app
+├── style.css              # Estilos visuales
+├── script.js              # Lógica del formulario y cálculo
+└── chart.js               # Función de gráfica con Chart.js
 
 ## 🔗 Demo
 
